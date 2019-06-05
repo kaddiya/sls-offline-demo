@@ -1,0 +1,27 @@
+service: sls-offline-demo
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+
+plugins:
+  - serverless-offline
+
+functions:
+    anatomy:
+      handler: anatomy-handler.anatomy
+      events:
+        - http: GET /
+
+    publicHello:
+      handler: public-handler.hello
+      events:
+        - http: GET hello
+
+    privateHello:
+      handler: private-handler.hello
+      events:
+        - http:
+            path: hello/pvt
+            method: get
+            private: true
