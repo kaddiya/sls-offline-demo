@@ -4,7 +4,7 @@ provider:
   name: aws
   apiKeys:
     - name: ${opt:stage}-api-key
-      value: ${opt:key}
+      value: ${opt:apiKey}
   usagePlan:
     quota:
       limit: 5000
