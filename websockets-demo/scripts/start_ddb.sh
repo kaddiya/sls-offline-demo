@@ -1,0 +1,2 @@
+#/bin/#
+sls dynamodb start
