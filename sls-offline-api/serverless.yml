@@ -2,6 +2,17 @@ service: sls-offline-api
 
 provider:
   name: aws
+  apiKeys:
+    - name: ${opt:stage}-api-key
+      value: ${opt:key}
+  usagePlan:
+    quota:
+      limit: 5000
+      offset: 2
+      period: MONTH
+    throttle:
+      burstLimit: 200
+      rateLimit: 100
   runtime: nodejs8.10
 
 plugins:
