@@ -1,4 +1,4 @@
-service: sls-offline-demo
+service: sls-offline-api
 
 provider:
   name: aws

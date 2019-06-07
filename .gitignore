@@ -61,3 +61,4 @@ typings/
 .next
 
 *.dynamodb/
+.DS_Store

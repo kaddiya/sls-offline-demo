@@ -1,6 +1,7 @@
 'use strict';
 
 module.exports.hello = async (event) => {
+  console.log("websocket id is "+event.requestContext.connectionId)
   return {
     statusCode: 200,
     body: JSON.stringify({

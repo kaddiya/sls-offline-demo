@@ -73,8 +73,24 @@ custom:
 #    - exclude-me-dir/**
 
 functions:
-  hello:
-    handler: handler.hello
+
+   socketsConnection:
+             description: "Sockets Connection"
+             handler: handler.hello
+             memorySize: 256
+             timeout: 30
+             events:
+               - websocket:
+                   route: $connect
+               - websocket:
+                   route: $disconnect
+    #onDisconnect:
+    #    handler: websocket-manager.onDisconnect
+    #    environment:
+    #        TABLE_NAME: ${self:custom.CONNECTIONS_TBL_NAME}
+    #    events:
+    #        - websocket:
+    #              route: $disconnect
 
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
