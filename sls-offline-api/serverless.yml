@@ -36,3 +36,19 @@ functions:
             path: hello/pvt
             method: get
             private: true
+
+    postHandler:
+      handler: post-handler.squarer
+      events:
+        - http:
+            path: example
+            method: POST
+            cors:
+              origin: '*'
+              headers:
+                - Content-Type
+                - X-Amz-Date
+                - Authorization
+                - X-Api-Key
+                - X-Amz-Security-Token
+                - X-Amz-User-Agent
