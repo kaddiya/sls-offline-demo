@@ -7,4 +7,7 @@
 
 `cat ~/.aws/credentials`
 
+## install the depencies - 
 
+`cd sls-offline-demo/sls-offline-api`
+`npm install`
