@@ -11,3 +11,7 @@
 
 `cd sls-offline-demo/sls-offline-api`
 `npm install`
+
+## Run the server
+
+ sls offline --apiKey=123 --stage=local
