@@ -28,6 +28,10 @@ functions:
       handler: public-handler.hello
       events:
         - http: GET hello
+          request:
+            parameters:
+              paths:
+                name: true
 
     privateHello:
       handler: private-handler.hello
